@@ -6,8 +6,8 @@ from telethon.tl.types import ChannelParticipantsAdmins
 
 logging.basicConfig(
     level=logging.INFO,
-    format='%(name)s - [%(levelname)s] - %(message)s'
-)
+    format='%(name)s - [%(levelname)s] - %(message)s') 
+
 LOGGER = logging.getLogger(__name__)
 
 api_id = int(os.environ.get("APP_ID"))
@@ -42,7 +42,7 @@ async def start(event):
                    )
 @client.on(events.NewMessage(pattern="^/komut$"))
 async def help(event):
-  helptext = "**🐺🇹🇷  Bozkurt Tagger Bot Komutları**\n\n**/tag <sepep> - 5-li Etiket Atar**\n\n**/etag <sebep> - Emoji ile etiketler**\n\n**/tektag sebep - kullanıcıları Tek Tek Etiketler**\n\n**/adminler sebep - Yöneticileri Tek Tek Tag Eder**\n\n**/start - botu başlatır**"
+  helptext = "**okyanussohbett Tagger Bot Komutları**\n\n**/tag <sepep> - 5-li Etiket Atar**\n\n**/etag <sebep> - Emoji ile etiketler**\n\n**/tektag sebep - kullanıcıları Tek Tek Etiketler**\n\n**/adminler sebep - Yöneticileri Tek Tek Tag Eder**\n\n**/start - botu başlatır**"
   await event.reply(helptext,
                     buttons=(
                       [Button.url('Beni Gruba Ekle➕', 'https://t.me/okyanussohbett')],
@@ -71,7 +71,7 @@ async def dur(event):
   emoji_calisan.remove(event.chat_id)
 
 
-emoji = " ❤️ 🧡 💛 💚 💙 💜 🖤 🤍 🤎 🙂 🙃 😉 😌 😍 🥰 😘 😗 😙 😚 😋 😛 😝 😜 🤪 🤨 🧐 🤓 😎 🤩 🥳 😏 😒 " \
+        "❤️ 🧡 💛 💚 💙 💜 🖤 🤍 🤎 🙂 🙃 😉 😌 😍 🥰 😘 😗 😙 😚 😋 😛 😝 😜 🤪 🤨 🧐 🤓 😎 🤩 🥳 😏 😒 " \
         "😞 😔 😟 😕 🙁 😣 😖 😫 😩 🥺 😢 😭 😤 😠 😡  🤯 😳 🥵 🥶 😱 😨 😰 😥 😓 🤗 🤔 🤭 🤫 🤥 😶 😐 😑 😬 🙄 " \
         "😯 😦 😧 😮 😲 🥱 😴 🤤 😪 😵 🤐 🥴 🤢 🤮 🤧 😷 🤒 🤕 🤑 🤠 😈 👿 👹 👺 🤡  👻 💀 👽 👾 🤖 🎃 😺 😸 😹 " \
         "😻 😼 😽 🙀 😿🇹🇷🐺 🦄 😾".split(" ")
@@ -110,7 +110,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in emoji_calisan:
-        await event.respond("** durdum🌹 @okyqnussohbett**")
+        await event.respond("** durdum🌹 @okyanussohbett**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -164,9 +164,9 @@ async def mentionall(event):
     if msg == None:
         return await event.respond("Önceki Mesajlara Cevap Vermeyin")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("Başlamak için sebep yokdu🙁 @bozkurtgamebot")
+    return await event.respond("Başlamak için sebep yokdu🙁 @okyanussohbett")
   else:
-    return await event.respond("Işleme başlamak için sebep yokdu🙁 @bozkurtaggerbot ")
+    return await event.respond("Işleme başlamak için sebep yokdu🙁 @okyanussohbett ")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
@@ -194,7 +194,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👤 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
-        await event.respond("durdum🌹 @okyqnussohbett")
+        await event.respond("durdum🌹 @okyanussohbett")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
