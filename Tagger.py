@@ -176,7 +176,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👤 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
-        await event.respond("Durdum🌹 @okyqnussohbett\n\n**Burda sizin reklamınız ola bilir @bozkurtaggerbot **🐺🇹🇷🇦🇿")
+        await event.respond("Durdum🌹 @okyanussohbett\n\n**Burda sizin reklamınız ola bilir @cavres34")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -241,7 +241,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"**👤 - [{usr.first_name}](tg://user?id={usr.id}) \n**"
       if event.chat_id not in tekli_calisan:
-        await event.respond("**Durdum🌹\n\n**Burda sizin reklamınız ola bilər @bozkurtaggerbot **🇹🇷🐺****")
+        await event.respond("**Durdum🌹\n\n**Burda sizin reklamınız ola bilər @okyanussohbett****")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, f"{usrtxt} {msg}")
@@ -259,7 +259,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👤 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in tekli_calisan:
-        await event.respond("Durdum🌹 @okyanussohbett\n\n**Burda sizin reklamınız ola bilir @bozkurtaggerbot **🇹🇷**")
+        await event.respond("Durdum🌹 @okyanussohbett\n\n**Burda sizin reklamınız ola bilir @okyanussohbett ****")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
